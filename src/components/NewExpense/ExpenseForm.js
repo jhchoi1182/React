@@ -36,7 +36,7 @@ const ExpenseForm = (props) => {
 
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount,
       date: new Date(enteredDate)
     }
 
@@ -62,6 +62,7 @@ const ExpenseForm = (props) => {
       </div>
     </div>
     <div className="new-expense__actions">
+      <button type="button" onClick={props.onCancel}>닫기</button>
       <button type="submit">비용 추가하기</button>
     </div>
   </form>
